@@ -1,0 +1,1079 @@
+<!DOCTYPE html>
+<head>
+    <title>My Music Player</title>
+    <link rel="stylesheet" type="text/css" href="..\stylecssfile\style.css">
+    <link rel="stylesheet" href="..\stylecssfile\font-awesome-4.7.0\font-awesome-4.7.0\css\font-awesome.min.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+</head>
+<!--this page is responsive it adjust the size accordingly-->
+<body>
+    <!--Navigation bar 
+    Divided into two section left and right -->
+    <nav class="nav-bar flex-display">
+        <!--Navigation bar left section containting -->
+        <div id="nav-left" class="flex-display">
+            <div class="logo-section flex-display">
+                <div class="logo">
+                    <img src="..\player_images\player_logo.jpg">
+                </div>
+                <div class="studio-name">
+                    <p>Ninja</p><p>Studio</p>
+                </div>
+            </div>
+            <div class="Home-page-link">
+                <a href="player_main.html">Home</a>
+            </div>    
+        </div>
+        <!--Navigation bar right section containing the notification and the current song played image and a search box-->
+        <div id="nav-right" class="flex-display">
+            <form method="GET" action="" class="search-box">
+                <i class="fa fa-search" aria-hidden="true"></i>
+                <input type="text" placeholder="Search">
+                <i class="fa fa-microphone" aria-hidden="true" style="color:#95b0b8"></i>
+            </form>
+            <div class="notification">
+                <i class="fa fa-bell " aria-hidden="true"></i>
+            </div>
+            <div class="curr-song-img">
+                <img src="..\player_images\singer01.jpg" alt="singer01">
+            </div>
+        </div>
+    </nav>
+    <!--main home page-->
+    <main class="flex-display" id="home-page">
+        <section>
+            <!--Famous album tracks section contining 3 album images-->
+            <div class="famous-albums flex-display">
+                <div><a href=""><img src="..\player_images\famous_album1.jpg"></a></div>
+                <div><a href=""><img src="..\player_images\famous_album2.jpg"></a></div>
+                <div><a href=""><img src="..\player_images\famous_album3.jpg"></a></div>
+            </div>
+            <!--Latest-Release-Songs-->
+            <!--this section contains the divisions of latest release songs-->
+            <!--division contains latest release song image ,song name,singer name,ellipses (on click show a drop-down what to do with the song) and time of the song-->
+            <!--it is having flex display and overflow in x direction is hidden but y direction you can scroll ,design is responsive-->
+            <!--onclick the audio-player appears at the bottom of the window-->
+            <div class="latest-release flex-display">
+                <div class="heading"><p>Latest Release</p></div>
+                <div class="latest-release-container flex-display">
+                    <div class="latest-release-song flex-display">
+                        <div class="image-container flex-display">
+                            <img src="..\player_images\latest_release01.jpg" >
+                            <div class="play-button">
+                                <a href="#audio-player">
+                                    <i class="fa fa-play" aria-hidden="true"></i>
+                                </a>
+                            </div>
+                            <!--latest-release-song-name-container-->
+                            <div class="song-name">
+                                <h3>
+                                    Perfect
+                                </h3>
+                                <p>
+                                    Ed Shreen
+                                </p>
+                            </div>
+                        </div>
+                        <div class="time-and-listContainer">
+                            <!--latest-release-drop-down-list-->
+                            <div class="drop-down-list-container">
+                                <div class="drop-down-ellipses">
+                                    <i class="fa fa-ellipsis-h" aria-hidden="true"></i>
+                                </div>
+                                <div class="drop-down">
+                                    <div class="drop-down-item">
+                                        <a>
+                                            <i class="fa fa-play" aria-hidden="true"></i> Play Now
+                                        </a>
+                                    </div>
+                                    <div class="drop-down-item">
+                                        <a>
+                                            <i class="fa fa-plus" aria-hidden="true"></i> Add To Queue
+                                        </a>
+                                    </div>
+                                    <div class="drop-down-item">
+                                        <a>
+                                            <i class="fa fa-list-alt" aria-hidden="true"></i> Add to favourite
+                                        </a>
+                                    </div>
+                                    <div class="drop-down-item">
+                                        <a>
+                                            <i class="fa fa-info-circle" aria-hidden="true"></i> Get info
+                                        </a>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="time-continer">
+                                <p>4:22</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="latest-release-song flex-display">
+                        <div class="image-container flex-display">
+                            <img src="..\player_images\latest_release01.jpg" >
+                            <div class="play-button">
+                                <a href="#audio-player">
+                                    <i class="fa fa-play" aria-hidden="true"></i>
+                                </a>
+                            </div>
+                            <div class="song-name">
+                                <h3>
+                                    Perfect
+                                </h3>
+                                <p>
+                                    Ed Shreen
+                                </p>
+                            </div>
+                        </div>
+                        <div class="time-and-listContainer">
+                            <div class="drop-down-list-container">
+                                <div class="drop-down-ellipses">
+                                    <i class="fa fa-ellipsis-h" aria-hidden="true"></i>
+                                </div>
+                                <div class="drop-down">
+                                    <div class="drop-down-item">
+                                        <a>
+                                            <i class="fa fa-play" aria-hidden="true"></i> Play Now
+                                        </a>
+                                    </div>
+                                    <div class="drop-down-item">
+                                        <a>
+                                            <i class="fa fa-plus" aria-hidden="true"></i> Add To Queue
+                                        </a>
+                                    </div>
+                                    <div class="drop-down-item">
+                                        <a>
+                                            <i class="fa fa-list-alt" aria-hidden="true"></i> Add to favourite
+                                        </a>
+                                    </div>
+                                    <div class="drop-down-item">
+                                        <a>
+                                            <i class="fa fa-info-circle" aria-hidden="true"></i> Get info
+                                        </a>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="time-continer">
+                                <p>4:22</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="latest-release-song flex-display">
+                        <div class="image-container flex-display">
+                            <img src="..\player_images\latest_release01.jpg" >
+                            <div class="play-button">
+                                <a href="#audio-player">
+                                    <i class="fa fa-play" aria-hidden="true"></i>
+                                </a>
+                            </div>
+                            <div class="song-name">
+                                <h3>
+                                    Perfect
+                                </h3>
+                                <p>
+                                    Ed Shreen
+                                </p>
+                            </div>
+                        </div>
+                        <div class="time-and-listContainer">
+                            <div class="drop-down-list-container">
+                                <div class="drop-down-ellipses">
+                                    <i class="fa fa-ellipsis-h" aria-hidden="true"></i>
+                                </div>
+                                <div class="drop-down">
+                                    <div class="drop-down-item">
+                                        <a>
+                                            <i class="fa fa-play" aria-hidden="true"></i> Play Now
+                                        </a>
+                                    </div>
+                                    <div class="drop-down-item">
+                                        <a>
+                                            <i class="fa fa-plus" aria-hidden="true"></i> Add To Queue
+                                        </a>
+                                    </div>
+                                    <div class="drop-down-item">
+                                        <a>
+                                            <i class="fa fa-list-alt" aria-hidden="true"></i> Add to favourite
+                                        </a>
+                                    </div>
+                                    <div class="drop-down-item">
+                                        <a>
+                                            <i class="fa fa-info-circle" aria-hidden="true"></i> Get info
+                                        </a>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="time-continer">
+                                <p>4:22</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="latest-release-song flex-display">
+                        <div class="image-container flex-display">
+                            <img src="..\player_images\latest_release01.jpg" >
+                            <div class="play-button">
+                                <a href="#audio-player">
+                                    <i class="fa fa-play" aria-hidden="true"></i>
+                                </a>
+                            </div>
+                            <div class="song-name">
+                                <h3>
+                                    Perfect
+                                </h3>
+                                <p>
+                                    Ed Shreen
+                                </p>
+                            </div>
+                        </div>
+                        <div class="time-and-listContainer">
+                            <div class="drop-down-list-container">
+                                <div class="drop-down-ellipses">
+                                    <i class="fa fa-ellipsis-h" aria-hidden="true"></i>
+                                </div>
+                                <div class="drop-down">
+                                    <div class="drop-down-item">
+                                        <a>
+                                            <i class="fa fa-play" aria-hidden="true"></i> Play Now
+                                        </a>
+                                    </div>
+                                    <div class="drop-down-item">
+                                        <a>
+                                            <i class="fa fa-plus" aria-hidden="true"></i> Add To Queue
+                                        </a>
+                                    </div>
+                                    <div class="drop-down-item">
+                                        <a>
+                                            <i class="fa fa-list-alt" aria-hidden="true"></i> Add to favourite
+                                        </a>
+                                    </div>
+                                    <div class="drop-down-item">
+                                        <a>
+                                            <i class="fa fa-info-circle" aria-hidden="true"></i> Get info
+                                        </a>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="time-continer">
+                                <p>4:22</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="latest-release-song flex-display">
+                        <div class="image-container flex-display">
+                            <img src="..\player_images\latest_release01.jpg" >
+                            <div class="play-button">
+                                <a href="#audio-player">
+                                    <i class="fa fa-play" aria-hidden="true"></i>
+                                </a>
+                            </div>
+                            <div class="song-name">
+                                <h3>
+                                    Perfect
+                                </h3>
+                                <p>
+                                    Ed Shreen
+                                </p>
+                            </div>
+                        </div>
+                        <div class="time-and-listContainer">
+                            <div class="drop-down-list-container">
+                                <div class="drop-down-ellipses">
+                                    <i class="fa fa-ellipsis-h" aria-hidden="true"></i>
+                                </div>
+                                <div class="drop-down">
+                                    <div class="drop-down-item">
+                                        <a>
+                                            <i class="fa fa-play" aria-hidden="true"></i> Play Now
+                                        </a>
+                                    </div>
+                                    <div class="drop-down-item">
+                                        <a>
+                                            <i class="fa fa-plus" aria-hidden="true"></i> Add To Queue
+                                        </a>
+                                    </div>
+                                    <div class="drop-down-item">
+                                        <a>
+                                            <i class="fa fa-list-alt" aria-hidden="true"></i> Add to favourite
+                                        </a>
+                                    </div>
+                                    <div class="drop-down-item">
+                                        <a>
+                                            <i class="fa fa-info-circle" aria-hidden="true"></i> Get info
+                                        </a>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="time-continer">
+                                <p>4:22</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="latest-release-song flex-display">
+                        <div class="image-container flex-display">
+                            <img src="..\player_images\latest_release01.jpg" >
+                            <div class="play-button">
+                                <a href="#audio-player">
+                                    <i class="fa fa-play" aria-hidden="true"></i>
+                                </a>
+                            </div>
+                            <div class="song-name">
+                                <h3>
+                                    Perfect
+                                </h3>
+                                <p>
+                                    Ed Shreen
+                                </p>
+                            </div>
+                        </div>
+                        <div class="time-and-listContainer">
+                            <div class="drop-down-list-container">
+                                <div class="drop-down-ellipses">
+                                    <i class="fa fa-ellipsis-h" aria-hidden="true"></i>
+                                </div>
+                                <div class="drop-down">
+                                    <div class="drop-down-item">
+                                        <a>
+                                            <i class="fa fa-play" aria-hidden="true"></i> Play Now
+                                        </a>
+                                    </div>
+                                    <div class="drop-down-item">
+                                        <a>
+                                            <i class="fa fa-plus" aria-hidden="true"></i> Add To Queue
+                                        </a>
+                                    </div>
+                                    <div class="drop-down-item">
+                                        <a>
+                                            <i class="fa fa-list-alt" aria-hidden="true"></i> Add to favourite
+                                        </a>
+                                    </div>
+                                    <div class="drop-down-item">
+                                        <a>
+                                            <i class="fa fa-info-circle" aria-hidden="true"></i> Get info
+                                        </a>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="time-continer">
+                                <p>4:22</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="latest-release-song flex-display">
+                        <div class="image-container flex-display">
+                            <img src="..\player_images\latest_release01.jpg" >
+                            <div class="play-button">
+                                <a href="#audio-player">
+                                    <i class="fa fa-play" aria-hidden="true"></i>
+                                </a>
+                            </div>
+                            <div class="song-name">
+                                <h3>
+                                    Perfect
+                                </h3>
+                                <p>
+                                    Ed Shreen
+                                </p>
+                            </div>
+                        </div>
+                        <div class="time-and-listContainer">
+                            <div class="drop-down-list-container">
+                                <div class="drop-down-ellipses">
+                                    <i class="fa fa-ellipsis-h" aria-hidden="true"></i>
+                                </div>
+                                <div class="drop-down">
+                                    <div class="drop-down-item">
+                                        <a>
+                                            <i class="fa fa-play" aria-hidden="true"></i> Play Now
+                                        </a>
+                                    </div>
+                                    <div class="drop-down-item">
+                                        <a>
+                                            <i class="fa fa-plus" aria-hidden="true"></i> Add To Queue
+                                        </a>
+                                    </div>
+                                    <div class="drop-down-item">
+                                        <a>
+                                            <i class="fa fa-list-alt" aria-hidden="true"></i> Add to favourite
+                                        </a>
+                                    </div>
+                                    <div class="drop-down-item">
+                                        <a>
+                                            <i class="fa fa-info-circle" aria-hidden="true"></i> Get info
+                                        </a>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="time-continer">
+                                <p>4:22</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="latest-release-song flex-display">
+                        <div class="image-container flex-display">
+                            <img src="..\player_images\latest_release01.jpg" >
+                            <div class="play-button">
+                                <a href="#audio-player">
+                                    <i class="fa fa-play" aria-hidden="true"></i>
+                                </a>
+                            </div>
+                            <div class="song-name">
+                                <h3>
+                                    Perfect
+                                </h3>
+                                <p>
+                                    Ed Shreen
+                                </p>
+                            </div>
+                        </div>
+                        <div class="time-and-listContainer">
+                            <div class="drop-down-list-container">
+                                <div class="drop-down-ellipses">
+                                    <i class="fa fa-ellipsis-h" aria-hidden="true"></i>
+                                </div>
+                                <div class="drop-down">
+                                    <div class="drop-down-item">
+                                        <a>
+                                            <i class="fa fa-play" aria-hidden="true"></i> Play Now
+                                        </a>
+                                    </div>
+                                    <div class="drop-down-item">
+                                        <a>
+                                            <i class="fa fa-plus" aria-hidden="true"></i> Add To Queue
+                                        </a>
+                                    </div>
+                                    <div class="drop-down-item">
+                                        <a>
+                                            <i class="fa fa-list-alt" aria-hidden="true"></i> Add to favourite
+                                        </a>
+                                    </div>
+                                    <div class="drop-down-item">
+                                        <a>
+                                            <i class="fa fa-info-circle" aria-hidden="true"></i> Get info
+                                        </a>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="time-continer">
+                                <p>4:22</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!--this is Popular-Artists-section-->
+            <!--this section contain singers on clicking the images you can visit the respective singer page but in this case on clicking will take you only to cold play page-->
+            <!--you can scroll in x direction and y-direction overflow is hidden-->
+            <!--each divison in this section contains singer image and name of the singer-->
+            <div class="Popular-artists">
+                <div class="heading"><p>Popular Artists</p></div>
+                <div class="Popular-artist-container">
+                    <div class="artist-image-name">
+                        <a href="cold_play.html">
+                            <img src="..\player_images\cold_play_artist.jpg">
+                            <p>
+                                Cold Play
+                            </p>
+                        </a>
+                    </div>
+                <div class="artist-image-name">
+                    <a href="cold_play.html">
+                        <img src="..\player_images\shreya_ghoshall.jpeg">
+                        <p>
+                            Shreya ghoshal
+                        </p>
+                    </a>
+                </div>
+                <div class="artist-image-name">
+                    <a href="cold_play.html">
+                        <img src="..\player_images\justin_beberr.jpg">
+                        <p>
+                            Justin Beber
+                        </p>
+                    </a>
+                </div>
+                <div class="artist-image-name">
+                    <a href="cold_play.html">
+                        <img src="..\player_images\ed_shreene.jpg">
+                        <p>
+                            Ed Shreen
+                        </p>
+                    </a>
+                </div>
+                <div class="artist-image-name">
+                    <a href="cold_play.html">
+                        <img src="..\player_images\beyonce2.png">
+                        <p>
+                            Beyonce
+                        </p>
+                    </a>
+                </div>
+                <div class="artist-image-name">
+                    <a href="cold_play.html">
+                        <img src="..\player_images\bebe_rexaa.jpg">
+                        <p>
+                            Bebe Rexa
+                        </p>
+                    </a>
+                </div>
+                <div class="artist-image-name">
+                    <a href="cold_play.html">
+                        <img src="..\player_images\Arijit_Singh.jpg">
+                        <p>
+                            Arijit Singh
+                        </p>
+                    </a>
+                </div>
+                <div class="artist-image-name">
+                    <a href="cold_play.html">
+                        <img src="..\player_images\taylor_swiftt.jpg">
+                        <p>
+                            Taylor Swift
+                        </p>
+                    </a>
+                </div>
+                <div class="artist-image-name">
+                    <a href="cold_play.html">
+                        <img src="..\player_images\salena_gomezz.jpg">
+                        <p>
+                            Salena Gomez
+                        </p>
+                    </a>
+                </div>
+                
+                </div>
+            </div>
+            <!--this is Different generes section divided into two parts-->
+            <div class="different-genre1">
+                <a href="">
+                    <img src="..\player_images\love_genere.jpg">
+                    <p class="genre-name">Love</p>
+                </a>
+                <a href="">
+                    <img src="..\player_images\retro_gener.jpg">
+                    <p class="genre-name">Retro</p>
+                </a>
+                <a href="">
+                    <img src="..\player_images\rock_genere.jpg">
+                    <p class="genre-name">Rock</p>
+                </a>
+                <a href="">
+                    <img src="..\player_images\pop_gener.jpg">
+                    <p class="genre-name">Pop</p>
+                </a>
+                <a href="">
+                    <img src="..\player_images\workout_genere.jpg">
+                    <p class="genre-name">Workout</p>
+                </a>
+                <a href="">
+                    <img src="..\player_images\chill_gener.jpg">
+                    <p class="genre-name">Chill</p>
+                </a>
+                <a href="">
+                    <img src="..\player_images\festival_genre.jpg">
+                    <p class="genre-name">Festival</p>
+                </a>
+            </div>
+            <!--Popular generes-->
+            <div class="different-genre2">
+                <div><a href=""><img src="..\player_images\party_genre.jpg"><p>Party</p></a></div>
+                <div><a href=""><img src="..\player_images\roadTrip_genre.jpg"><p>Road Trip</p></a></div>
+                <div><a href=""><img src="..\player_images\electronic_genre.jpg"><p>Electronic</p></a></div>
+            </div>
+            <!--Latest released English song-->
+            <!--this section contaions divisions having song cover and song name-->
+            <!--onclick the audio-player appears at the bottom of the window-->
+            <div class="latest-music english">
+                <div class="heading">
+                    <p>
+                        Latest English
+                    </p>
+                </div>
+                <div class="flex-display latest-music-container">
+                    <div class="song-container">
+                        <a href="#audio-player">
+                            <img src="..\player_images\song1.jpg">
+                        </a>
+                        <p>Onism</p>
+                        <p>July 10, 2018</p>
+                    </div>
+                    <div class="song-container">
+                        <a href="#audio-player">
+                            <img src="..\player_images\song1.jpg">
+                        </a>
+                        <p>Onism</p>
+                        <p>July 10, 2018</p>
+                    </div>
+                    <div class="song-container">
+                        <a href="#audio-player">
+                            <img src="..\player_images\song1.jpg">
+                        </a>
+                        <p>Onism</p>
+                        <p>July 10, 2018</p>
+                    </div>
+                    <div class="song-container">
+                        <a href="#audio-player">
+                            <img src="..\player_images\song1.jpg">
+                        </a>
+                        <p>Onism</p>
+                        <p>July 10, 2018</p>
+                    </div>
+                    <div class="song-container">
+                        <a href="#audio-player">
+                            <img src="..\player_images\song1.jpg">
+                        </a>
+                        <p>Onism</p>
+                        <p>July 10, 2018</p>
+                    </div>
+                    <div class="song-container">
+                        <a href="#audio-player">
+                            <img src="..\player_images\song1.jpg">
+                        </a>
+                        <p>Onism</p>
+                        <p>July 10, 2018</p>
+                    </div>
+                    <div class="song-container">
+                        <a href="#audio-player">
+                            <img src="..\player_images\song1.jpg">
+                        </a>
+                        <p>Onism</p>
+                        <p>July 10, 2018</p>
+                    </div>
+                    <div class="song-container">
+                        <a href="#audio-player">
+                            <img src="..\player_images\song1.jpg">
+                        </a>
+                        <p>Onism</p>
+                        <p>July 10, 2018</p>
+                    </div>
+                </div>
+            </div>
+            <!--Latest Release Hindi Song-->
+            <div class="latest-music hindi">
+                <div class="heading"><p>Latest Hindi</p></div>
+                <div class="flex-display latest-music-container">
+                    <div class="song-container">
+                        <a href="#audio-player">
+                            <img src="..\player_images\song1.jpg">
+                        </a>
+                        <p>Onism</p>
+                        <p>July 10, 2018</p>
+                    </div>
+                    <div class="song-container">
+                        <a href="#audio-player">
+                            <img src="..\player_images\song1.jpg">
+                        </a>
+                        <p>Onism</p>
+                        <p>July 10, 2018</p>
+                    </div>
+                    <div class="song-container">
+                        <a href="#audio-player">
+                            <img src="..\player_images\song1.jpg">
+                        </a>
+                        <p>Onism</p>
+                        <p>July 10, 2018</p>
+                    </div>
+                    <div class="song-container">
+                        <a href="#audio-player">
+                            <img src="..\player_images\song1.jpg">
+                        </a>
+                        <p>Onism</p>
+                        <p>July 10, 2018</p>
+                    </div>
+                    <div class="song-container">
+                        <a href="#audio-player">
+                            <img src="..\player_images\song1.jpg">
+                        </a>
+                        <p>Onism</p>
+                        <p>July 10, 2018</p>
+                    </div>
+                    <div class="song-container">
+                        <a href="#audio-player">
+                            <img src="..\player_images\song1.jpg">
+                        </a>
+                        <p>Onism</p>
+                        <p>July 10, 2018</p>
+                    </div>
+                    <div class="song-container">
+                        <a href="#audio-player">
+                            <img src="..\player_images\song1.jpg">
+                        </a>
+                        <p>Onism</p>
+                        <p>July 10, 2018</p>
+                    </div>
+                    <div class="song-container">
+                        <a href="#audio-player">
+                            <img src="..\player_images\song1.jpg">
+                        </a>
+                        <p>Onism</p>
+                        <p>July 10, 2018</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <aside>
+            <!--Songs to be played next (Songs in Queue)-->
+            <!--this list is responsive on reducing the window width the list size also reduces on hover the list ,the list width increases -->
+            <!--on hovering the heart icon in each division color changes to pink-->
+            <div class="side-queue">
+                <div class="heading"><p>Queue</p></div>
+                <div class="song-in-queue">
+                    <div class="queue-song-container">
+                        <div class="number">
+                            <p>01</p>
+                        </div>
+                        <div class="image-con">
+                           <a href="#audio-player"><img src="..\player_images\dilbaronS.jpg"></a>
+                        </div>
+                        <div class="song-name">
+                            <h3>Singer</h3>
+                            <p>Song name</p>
+                        </div>
+                        <div class="heart">
+                            <i class="fa fa-heart-o"></i>
+                        </div>
+                    </div>
+                    <div class="queue-song-container">
+                        <div class="number">
+                            <p>02</p>
+                        </div>
+                        <div class="image-con">
+                           <a href="#audio-player"><img src="..\player_images\zaalimaS.jpg"></a>
+                        </div>
+                        <div class="song-name">
+                            <h3>Singer</h3>
+                            <p>Song name</p>
+                        </div>
+                        <div class="heart">
+                            <i class="fa fa-heart-o"></i>
+                        </div>
+                    </div>
+                    <div class="queue-song-container">
+                        <div class="number">
+                            <p>03</p>
+                        </div>
+                        <div class="image-con">
+                           <a href="#audio-player"><img src="..\player_images\tere_naalS.jpg"></a>
+                        </div>
+                        <div class="song-name">
+                            <h3>Singer</h3>
+                            <p>Song name</p>
+                        </div>
+                        <div class="heart">
+                            <i class="fa fa-heart-o"></i>
+                        </div>
+                    </div>
+                    <div class="queue-song-container">
+                        <div class="number">
+                            <p>04</p>
+                        </div>
+                        <div class="image-con">
+                           <a href="#audio-player"><img src="..\player_images\tamma_tammaS.jpg"></a>
+                        </div>
+                        <div class="song-name">
+                            <h3>Singer</h3>
+                            <p>Song name</p>
+                        </div>
+                        <div class="heart">
+                            <i class="fa fa-heart-o"></i>
+                        </div>
+                    </div>
+                    <div class="queue-song-container">
+                        <div class="number">
+                            <p>05</p>
+                        </div>
+                        <div class="image-con">
+                           <a href="#audio-player"><img src="..\player_images\dilbaronS.jpg"></a>
+                        </div>
+                        <div class="song-name">
+                            <h3>Singer</h3>
+                            <p>Song name</p>
+                        </div>
+                        <div class="heart">
+                            <i class="fa fa-heart-o"></i>
+                        </div>
+                    </div>
+                    <div class="queue-song-container">
+                        <div class="number">
+                            <p>06</p>
+                        </div>
+                        <div class="image-con">
+                           <a href="#audio-player"><img src="..\player_images\zaalimaS.jpg"></a>
+                        </div>
+                        <div class="song-name">
+                            <h3>Singer</h3>
+                            <p>Song name</p>
+                        </div>
+                        <div class="heart">
+                            <i class="fa fa-heart-o"></i>
+                        </div>
+                    </div>
+                    <div class="queue-song-container">
+                        <div class="number">
+                            <p>07</p>
+                        </div>
+                        <div class="image-con">
+                           <a href="#audio-player"><img src="..\player_images\dilbaronS.jpg"></a>
+                        </div>
+                        <div class="song-name">
+                            <h3>Singer</h3>
+                            <p>Song name</p>
+                        </div>
+                        <div class="heart">
+                            <i class="fa fa-heart-o"></i>
+                        </div>
+                    </div>
+                    <div class="queue-song-container">
+                        <div class="number">
+                            <p>08</p>
+                        </div>
+                        <div class="image-con">
+                           <a href="#audio-player"><img src="..\player_images\dilbaronS.jpg"></a>
+                        </div>
+                        <div class="song-name">
+                            <h3>Singer</h3>
+                            <p>Song name</p>
+                        </div>
+                        <div class="heart">
+                            <i class="fa fa-heart-o"></i>
+                        </div>
+                    </div>
+                    <div class="queue-song-container">
+                        <div class="number">
+                            <p>09</p>
+                        </div>
+                        <div class="image-con">
+                           <a href="#audio-player"><img src="..\player_images\tamma_tammaS.jpg"></a>
+                        </div>
+                        <div class="song-name">
+                            <h3>Singer</h3>
+                            <p>Song name</p>
+                        </div>
+                        <div class="heart">
+                            <i class="fa fa-heart-o"></i>
+                        </div>
+                    </div>
+                    <div class="queue-song-container">
+                        <div class="number">
+                            <p>10</p>
+                        </div>
+                        <div class="image-con">
+                           <a href="#audio-player"><img src="..\player_images\zaalimaS.jpg"></a>
+                        </div>
+                        <div class="song-name">
+                            <h3>Singer</h3>
+                            <p>Song name</p>
+                        </div>
+                        <div class="heart">
+                            <i class="fa fa-heart-o"></i>
+                        </div>
+                    </div>
+                    <div class="queue-song-container">
+                        <div class="number">
+                            <p>11</p>
+                        </div>
+                        <div class="image-con">
+                           <a href="#audio-player"><img src="..\player_images\dilbaronS.jpg"></a>
+                        </div>
+                        <div class="song-name">
+                            <h3>Singer</h3>
+                            <p>Song name</p>
+                        </div>
+                        <div class="heart">
+                            <i class="fa fa-heart-o"></i>
+                        </div>
+                    </div>
+                    <div class="queue-song-container">
+                        <div class="number">
+                            <p>12</p>
+                        </div>
+                        <div class="image-con">
+                           <a href="#audio-player"><img src="..\player_images\tere_naalS.jpg"></a>
+                        </div>
+                        <div class="song-name">
+                            <h3>Singer</h3>
+                            <p>Song name</p>
+                        </div>
+                        <div class="heart">
+                            <i class="fa fa-heart-o"></i>
+                        </div>
+                    </div>
+                    <div class="queue-song-container">
+                        <div class="number">
+                            <p>13</p>
+                        </div>
+                        <div class="image-con">
+                           <a href="#audio-player"><img src="..\player_images\dilbaronS.jpg"></a>
+                        </div>
+                        <div class="song-name">
+                            <h3>Singer</h3>
+                            <p>Song name</p>
+                        </div>
+                        <div class="heart">
+                            <i class="fa fa-heart-o"></i>
+                        </div>
+                    </div>
+                    <div class="queue-song-container">
+                        <div class="number">
+                            <p>14</p>
+                        </div>
+                        <div class="image-con">
+                           <a href="#audio-player"><img src="..\player_images\tamma_tammaS.jpg"></a>
+                        </div>
+                        <div class="song-name">
+                            <h3>Singer</h3>
+                            <p>Song name</p>
+                        </div>
+                        <div class="heart">
+                            <i class="fa fa-heart-o"></i>
+                        </div>
+                    </div>
+                    <div class="queue-song-container">
+                        <div class="number">
+                            <p>15</p>
+                        </div>
+                        <div class="image-con">
+                           <a href="#audio-player"><img src="..\player_images\zaalimaS.jpg"></a>
+                        </div>
+                        <div class="song-name">
+                            <h3>Singer</h3>
+                            <p>Song name</p>
+                        </div>
+                        <div class="heart">
+                            <i class="fa fa-heart-o"></i>
+                        </div>
+                    </div>
+                    <div class="queue-song-container">
+                        <div class="number">
+                            <p>16</p>
+                        </div>
+                        <div class="image-con">
+                           <a href="#audio-player"><img src="..\player_images\tere_naalS.jpg"></a>
+                        </div>
+                        <div class="song-name">
+                            <h3>Singer</h3>
+                            <p>Song name</p>
+                        </div>
+                        <div class="heart">
+                            <i class="fa fa-heart-o"></i>
+                        </div>
+                    </div>
+                    <div class="queue-song-container">
+                        <div class="number">
+                            <p>17</p>
+                        </div>
+                        <div class="image-con">
+                           <a href="#audio-player"><img src="..\player_images\dilbaronS.jpg"></a>
+                        </div>
+                        <div class="song-name">
+                            <h3>Singer</h3>
+                            <p>Song name</p>
+                        </div>
+                        <div class="heart">
+                            <i class="fa fa-heart-o"></i>
+                        </div>
+                    </div>
+                    <div class="queue-song-container">
+                        <div class="number">
+                            <p>18</p>
+                        </div>
+                        <div class="image-con">
+                           <a href="#audio-player"><img src="..\player_images\tamma_tammaS.jpg"></a>
+                        </div>
+                        <div class="song-name">
+                            <h3>Singer</h3>
+                            <p>Song name</p>
+                        </div>
+                        <div class="heart">
+                            <i class="fa fa-heart-o"></i>
+                        </div>
+                    </div>
+                    <div class="queue-song-container">
+                        <div class="number">
+                            <p>19</p>
+                        </div>
+                        <div class="image-con">
+                           <a href="#audio-player"><img src="..\player_images\zaalimaS.jpg"></a>
+                        </div>
+                        <div class="song-name">
+                            <h3>Singer</h3>
+                            <p>Song name</p>
+                        </div>
+                        <div class="heart">
+                            <i class="fa fa-heart-o"></i>
+                        </div>
+                    </div>
+                    <div class="queue-song-container">
+                        <div class="number">
+                            <p>20</p>
+                        </div>
+                        <div class="image-con">
+                           <a href="#audio-player"><img src="..\player_images\dilbaronS.jpg"></a>
+                        </div>
+                        <div class="song-name">
+                            <h3>Singer</h3>
+                            <p>Song name</p>
+                        </div>
+                        <div class="heart">
+                            <i class="fa fa-heart-o"></i>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </aside>
+    </main>
+    <!--Audio-Player-Controls-->
+    <div id="audio-player">
+        <div class="left">
+            <div class="curr-song-img">
+                <img src="..\player_images\singer01.jpg" alt="singer01">
+            </div>
+            <div class="song-name">
+                <h3>Singer</h3>
+                <p>Song name</p>
+            </div>
+            <div class="heart">
+                <i class="fa fa-heart-o"></i>
+            </div>
+            <!-- these are the main player controls -->
+        </div>   
+        <div class="song-control-section">
+            <div class="controls">
+                <div><i class="fa fa-random"></i></div>
+                <div><i class="fa fa-step-backward"></i></div>
+                <div><i class="fa fa-pause-circle"></i></div>
+                <div><i class="fa fa-step-forward"></i></div>
+                <div><i class="fa fa-redo"></i></div>
+            </div>
+            <div class="slider1">
+                <div class="time">
+                    0:00
+                </div>
+                <div class="slider-container">
+                    <input type="range" min="0" max="100" value="0" class="slider" id="myRange">
+                </div>
+                <div class="time">
+                    3:30
+                </div>
+            </div>
+        </div>
+        <!-- other icons including the volume slider and all -->
+        <div class="audio-control">
+            <div>
+                <i class="fa fa-list-ul"></i>
+            </div>
+            <div>
+                <i class="fa fa-laptop"></i>
+            </div>
+            <div>
+                <i class="fa fa-volume-up"></i>
+            </div>
+            <div class=".slider-container">
+                <input type="range" min="0" max="100" value="0" class="slider" id="myRange" style="margin-top:0px;">
+            </div>
+            <div>
+                <i class="fa fa-expand-alt"></i>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
